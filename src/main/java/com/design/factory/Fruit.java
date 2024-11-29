@@ -5,7 +5,7 @@ package com.design.factory;
  * @version 1.0
  * @Title: Fruit
  * @Package com.design.factory
- * @Description: TODO
+ * @Description: 水果抽象类
  * @date 2023/8/5 15:59
  */
 public abstract class Fruit {

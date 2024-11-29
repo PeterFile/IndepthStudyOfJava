@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @version 1.0
  * @Title: SaleTicketDemo2
  * @Package com.chen
- * @Description: TODO
+ * @Description: ReentrantLock 锁实现卖票
  * @date 2023/7/27 19:27
  */
 public class SaleTicketDemo2 {

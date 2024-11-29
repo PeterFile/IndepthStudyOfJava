@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @version 1.0
  * @Title: ReplacePrint
  * @Package com.chen.executor
- * @Description: TODO
+ * @Description: 使用 ReentrantLock + Condition 实现交替打印
  * @date 2023/8/21 12:38
  */
 public class ReplacePrint {

@@ -5,7 +5,7 @@ package com.design.factory;
  * @version 1.0
  * @Title: Apple
  * @Package com.design.factory
- * @Description: TODO
+ * @Description: 苹果实现类
  * @date 2023/8/5 16:01
  */
 public class Apple extends Fruit {

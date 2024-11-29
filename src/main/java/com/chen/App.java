@@ -44,6 +44,9 @@ public class App {
     }
 }
 
+/**
+ * LRU 缓存
+ */
 class LRUCache {
     private HashMap<Integer, Node> map;
     private DoubleList cache;

@@ -8,7 +8,7 @@ import java.util.Random;
  * @version 1.0
  * @Title: ThreadLocalExample
  * @Package com.chen
- * @Description: TODO
+ * @Description: ThreadLocal 示例代码
  * @date 2023/8/15 11:09
  */
 public class ThreadLocalExample implements Runnable {

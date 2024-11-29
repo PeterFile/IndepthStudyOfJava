@@ -7,20 +7,20 @@ import java.util.concurrent.TimeUnit;
  * @version 1.0
  * @Title: PhoneAndSend
  * @Package com.chen
- * @Description: TODO
+ * @Description: synchronized 修饰的实例方法的锁是实例级别的
  * @date 2023/8/4 7:47
  */
 public class PhoneAndSend {
     public static void main(String[] args) {
         Test test = new Test();
         Test test2 = new Test();
-        new Thread(()->test2.phone(), "A").start();
+        new Thread(test2::phone, "A").start();
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        new Thread(()->test.send(), "B").start();
+        new Thread(test::send, "B").start();
     }
 }
 

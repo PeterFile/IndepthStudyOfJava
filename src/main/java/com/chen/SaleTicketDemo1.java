@@ -5,15 +5,15 @@ package com.chen;
  * @version 1.0
  * @Title: SaleTicketDemo1
  * @Package com.chen
- * @Description: TODO
+ * @Description: 模拟卖票
  * @date 2023/7/27 18:46
  */
 public class SaleTicketDemo1 {
     public static void main(String[] args) {
         Ticket ticket = new Ticket();
-        new Thread(()->{for (int i = 0; i < 40; i++) {ticket.sale();}},"A").start();
-        new Thread(()->{for (int i = 0; i < 40; i++) {ticket.sale();}},"B").start();
-        new Thread(()->{for (int i = 0; i < 80; i++) {ticket.sale();}},"C").start();
+        new Thread(()->{for (int i = 0; i < 10; i++) {ticket.sale();}},"A").start();
+        new Thread(()->{for (int i = 0; i < 10; i++) {ticket.sale();}},"B").start();
+        new Thread(()->{for (int i = 0; i < 10; i++) {ticket.sale();}},"C").start();
     }
 }
 

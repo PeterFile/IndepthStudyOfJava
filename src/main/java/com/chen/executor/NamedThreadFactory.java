@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @version 1.0
  * @Title: NamedThreadFactory
  * @Package com.chen.executor
- * @Description: TODO
+ * @Description: 线程命名工厂
  * @date 2023/8/15 16:53
  */
 public final class NamedThreadFactory implements ThreadFactory {

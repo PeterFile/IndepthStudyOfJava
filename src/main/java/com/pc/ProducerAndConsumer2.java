@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @version 1.0
  * @Title: ProducerAndConsumer2
  * @Package com.pc
- * @Description: 生产者与消费者
+ * @Description: ReentrantLock 实现生产者与消费者
  * @date 2023/7/27 20:17
  */
 public class ProducerAndConsumer2 {

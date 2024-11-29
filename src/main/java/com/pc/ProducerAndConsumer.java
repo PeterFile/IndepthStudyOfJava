@@ -1,13 +1,11 @@
 package com.pc;
 
-import lombok.Synchronized;
-
 /**
  * @author CWP
  * @version 1.0
  * @Title: ProducerAndConsumer
  * @Package com.pc
- * @Description: TODO
+ * @Description: synchronized 线程模仿生产者和消费者
  * @date 2023/7/27 19:58
  */
 public class ProducerAndConsumer {

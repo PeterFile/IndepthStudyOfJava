@@ -2,10 +2,7 @@ package com.chen;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 import static com.sun.javafx.fxml.expression.Expression.divide;
 
@@ -14,7 +11,7 @@ import static com.sun.javafx.fxml.expression.Expression.divide;
  * @version 1.0
  * @Title: CallerRunsPolicyTest
  * @Package com.chen
- * @Description: TODO
+ * @Description: CallerRunsPolicy 拒绝策略测试
  * @date 2023/9/6 11:16
  */
 public class CallerRunsPolicyTest {
@@ -27,6 +24,20 @@ public class CallerRunsPolicyTest {
                 new LinkedBlockingQueue<Runnable>(2),
                 new ThreadPoolExecutor.CallerRunsPolicy()
         );
+
+        ScheduledExecutorService monitor = Executors.newScheduledThreadPool(1);
+        monitor.scheduleAtFixedRate(() -> {
+            System.out.println("======== ThreadPool Status ========");
+            System.out.println("CorePoolSize: " + pool.getCorePoolSize());
+            System.out.println("ActiveCount: " + pool.getActiveCount());
+            System.out.println("PoolSize: " + pool.getPoolSize());
+            System.out.println("LargestPoolSize: " + pool.getLargestPoolSize());
+            System.out.println("TaskCount: " + pool.getTaskCount());
+            System.out.println("CompletedTaskCount: " + pool.getCompletedTaskCount());
+            System.out.println("QueueSize: " + pool.getQueue().size());
+            System.out.println("====================================");
+        }, 0, 5, TimeUnit.SECONDS);
+
 
         for (int i = 0; i <= 10; i++) {
             int taskId = i;

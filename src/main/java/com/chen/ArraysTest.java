@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @version 1.0
  * @Title: ArraysTest
  * @Package com.chen
- * @Description: TODO
+ * @Description: 多线程交替打印 0 - 100
  * @date 2023/8/4 8:13
  */
 //public class ArraysTest {
@@ -69,8 +69,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ArraysTest {
     private static final ReentrantLock LOCK = new ReentrantLock();
-    private static final int THREAD_COUNT = 2;
-    private static volatile int start = 0;
+    private static final int THREAD_COUNT = 3;
+    private static volatile int START = 0;
     private static final int END = 100;
 
     private static class Print implements Runnable {
@@ -89,18 +89,18 @@ public class ArraysTest {
 
         @Override
         public void run() {
-            while (start < END) {
+            while (START < END) {
                 LOCK.lock();
                 try {
-                    while (start % THREAD_COUNT != index) {
+                    while (START % THREAD_COUNT != index) {
                         conditions.get(index).await();
                     }
 
-                    if (start <= END) {
-                        System.out.println("Thread: " + index + "打印结果: " + start);
+                    if (START <= END) {
+                        System.out.println("Thread: " + index + "打印结果: " + START);
                     }
 
-                    start++;
+                    START++;
                     signalNext();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

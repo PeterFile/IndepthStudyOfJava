@@ -5,7 +5,7 @@ package com.design.abstractFactory;
  * @version 1.0
  * @Title: AbstractFactory
  * @Package com.design.abstractFactory
- * @Description: TODO
+ * @Description: 抽象工厂
  * @date 2023/8/5 16:23
  */
 public abstract class AbstractFactory {

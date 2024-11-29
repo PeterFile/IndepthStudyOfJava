@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @version 1.0
  * @Title: Binary
  * @Package com.chen
- * @Description: TODO
+ * @Description: 二分边界
  * @date 2023/9/5 23:26
  */
 public class Binary {

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @version 1.0
  * @Title: ThreadPoolExecutorExample
  * @Package com.chen
- * @Description: TODO
+ * @Description: 线程池的使用，以及动态参数简单实现
  * @date 2023/8/15 16:40
  */
 public class ThreadPoolExecutorExample {

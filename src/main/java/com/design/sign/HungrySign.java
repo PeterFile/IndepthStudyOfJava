@@ -5,7 +5,7 @@ package com.design.sign;
  * @version 1.0
  * @Title: HungrySign
  * @Package com.design.sign
- * @Description: TODO
+ * @Description: 饿汉式单例
  * @date 2023/8/5 16:32
  */
 public class HungrySign {

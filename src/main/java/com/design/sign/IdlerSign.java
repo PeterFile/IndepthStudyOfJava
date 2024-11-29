@@ -5,7 +5,7 @@ package com.design.sign;
  * @version 1.0
  * @Title: IdlerSign
  * @Package com.design.sign
- * @Description: TODO
+ * @Description: 懒汉式单例
  * @date 2023/8/5 16:50
  */
 public class IdlerSign {
